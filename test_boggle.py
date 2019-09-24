@@ -97,3 +97,13 @@ class TestBoggle(unittest.TestCase):
         self.assertTrue(twoLetterWord in foundWords)
         self.assertTrue(threeLetterWord in foundWords)
         self.assertTrue(notThereWord not in foundWords)
+
+    def test_load_dictionary(self):
+        """
+        test that the get_dictionary functions returns a dictionary
+        that has a length greater than 0
+        """
+        dictionary = boggle.get_dictionary("words.txt")
+        self.assertGreater(len(dictionary), 0)
+
+        
